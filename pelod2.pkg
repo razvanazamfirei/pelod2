@@ -1,0 +1,10 @@
+v 3
+d pelod2
+d PELOD2 Score Calculator
+d Razvan Azamfirei
+d Department of Anesthesiology and Critical Care
+d University of Pennsylvania
+d Distribution-Date: 01jul2024
+f src/pelod2.ado
+f src/pelod2.sthlp
+f src/pelod2.dlg
