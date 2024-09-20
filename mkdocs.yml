@@ -1,0 +1,51 @@
+site_name: PELOD2 Command Documentation
+site_author: Razvan Azamfirei
+repo_url: https://github.com/razvanazamfirei/pelod2/
+docs_dir: docs
+copyright: Copyright &copy; 2023 - 2024 Razvan Azamfirei
+theme:
+  name: material
+  palette:
+    accent: red
+  font:
+    code: JetBrains Mono
+  icon:
+    logo: material/calculator-variant
+    favicon: material/calculator-variant
+  features:
+    - navigation.instant
+    - toc.follow
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - content.code.annotate
+edit_uri: ""
+plugins:
+  - search
+nav:
+  - Home: 'index.md'
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/razvanazamfirei
+    - icon: fontawesome/brands/github
+      link: https://github.com/razvanazamfirei
+  generator: false
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde

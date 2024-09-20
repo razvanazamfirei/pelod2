@@ -1,0 +1,17 @@
+### Stata ###
+*.dta
+*.gph
+*.log
+*.smcl
+*.stpr
+*.stsem
+
+### Intellij ###
+.idea/
+
+### Taskfile ###
+.task/
+
+### Mkdocs ###
+site/
+!docs/

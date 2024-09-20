@@ -1,0 +1,44 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  update-pkg:
+    desc: "Update the package file"
+    vars:
+      DATE: '{{ now | date "02Jan2006" | lower }}'
+    cmds:
+      - 'echo -e "v 3\nd pelod2\nd PELOD2 Score Calculator\nd Razvan Azamfirei\nd Department of Anesthesiology and Critical Care\nd University of Pennsylvania\nd Distribution-Date: {{.DATE}}\nf src/pelod2.ado\nf src/pelod2.sthlp\nf src/pelod2.dlg" > pelod2.pkg'
+    silent: true
+
+  copy-files:
+    desc: "Copy files to docs folder"
+    cmds:
+      - cp -r src/ docs/src/
+      - cp stata.toc docs/stata.toc
+      - cp pelod2.pkg docs/pelod2.pkg
+    sources:
+      - src/pelod2.*
+      - stata.toc
+      - pelod2.pkg
+    generates:
+      - docs/src/pelod2.ado
+      - docs/src/pelod2.sthlp
+      - docs/src/pelod2.dlg
+      - docs/stata.toc
+      - docs/pelod2.pkg
+
+  git-operations:
+    vars:
+      DATE: '{{ now | date "2006-01-02" }}'
+    cmds:
+      - git add .
+      - git commit -m "Package Update - {{.DATE}}"
+      - git push
+    silent: true
+
+  release:
+    cmds:
+      - task update-pkg
+      - task copy-files
+      - task git-operations

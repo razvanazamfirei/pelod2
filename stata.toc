@@ -1,0 +1,8 @@
+v 3
+d Razvan Azamfirei
+d Department of Anesthesiology and Critical Care
+d University of Pennsylvania
+d
+d
+d Pediatric Logistic Organ Dysfunction 2 (PELOD-2) score
+p pelod2 PELOD-2 Score Calculator
